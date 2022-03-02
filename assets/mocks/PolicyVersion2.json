@@ -1,0 +1,127 @@
+{
+    "ModuleID": 182,
+    "AppName": "budget_app",
+    "ConfigType": "budget_policy_template",
+    "Tag": "2.0",
+    "BranchGUID": "61cf8582-72af-4b83-9100-e7ac19969588",
+    "Configuration": {
+        "template": {
+            "programID": null,
+            "clientName": null,
+            "programName": null,
+            "evaluationPeriod": null,
+            "budgetVersion": "2.0",
+            "ytdRunout": null,
+            "rollingRunout": null,
+            "programYear": null,
+            "claims": [
+                {
+                    "type": "IRBN",
+                    "value": false
+                },
+                {
+                    "type": "MLR",
+                    "value": false
+                },
+                {
+                    "type": "Concurent Trend",
+                    "value": false
+                }
+            ],
+            "stoploss": [
+                {
+                    "type": "Medical Stoploss",
+                    "value": false,
+                    "amount": null
+                },
+                {
+                    "type": "Pharmacy Stoploss",
+                    "value": false,
+                    "amount": null
+                }
+            ],
+            "inclusions": [
+                {
+                    "type": "Weight Inclusion",
+                    "inclusionData": [
+                        {
+                            "tableName": null,
+                            "fieldName": null,
+                            "rule": null
+                        }
+                    ]
+                },
+                {
+                    "type": "Budget Inclusion",
+                    "inclusionData": [
+                        {
+                            "tableName": null,
+                            "fieldName": null,
+                            "rule": null
+                        }
+                    ]
+                }
+            ],
+            "keys": [
+                {
+                    "type": "Weight Key",
+                    "keyData": [
+                        {
+                            "tableName": null,
+                            "fieldName": null
+                        }
+                    ]
+                },
+                {
+                    "type": "Entity Key",
+                    "keyData": [
+                        {
+                            "tableName": null,
+                            "fieldName": null
+                        }
+                    ]
+                },
+                {
+                    "type": "Budget Neutral Key",
+                    "keyData": [
+                        {
+                            "tableName": null,
+                            "fieldName": null
+                        }
+                    ]
+                }
+            ],
+            "reportingPeriods": [
+                {
+                    "type": "Reporting Period Base",
+                    "value": null
+                },
+                {
+                    "type": "Reporting Period Weight 2",
+                    "value": null
+                },
+                {
+                    "type": "Reporting Period Weight 3",
+                    "value": null
+                }
+            ],
+            "financialTrend": [
+                {
+                    "typeOfService": null,
+                    "trendPercentage": null
+                }
+            ],
+            "grouperVersions": [
+                {
+                    "grouper": null,
+                    "version": null
+                }
+            ]
+        }
+    },
+    "Source": [
+        {
+            "VersionGUID": "9bcaf1cc-0fc5-40e0-a124-fe1f426758ed"
+        }
+    ]
+}

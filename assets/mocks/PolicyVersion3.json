@@ -1,0 +1,191 @@
+{
+    "ModuleID": 182,
+    "AppName": "budget_app",
+    "ConfigType": "budget_policy_template",
+    "Tag": "3.0",
+    "BranchGUID": "61cf8582-72af-4b83-9100-e7ac19969588",
+    "Configuration": {
+        "template": {
+            "programID": null,
+            "clientName": null,
+            "programName": null,
+            "evaluationPeriod": null,
+            "budgetVersion": "3.0",
+            "programRunout": null,
+            "programPCP": null,
+            "allowedAmountMethod": "Allowed",
+            "programYear": null,
+            "claims": [
+                {
+                    "type": "IRBN",
+                    "value": false
+                },
+                {
+                    "type": "MLR",
+                    "value": false
+                },
+                {
+                    "type": "Dental",
+                    "value": false
+                },
+                {
+                    "type": "Vision",
+                    "value": false
+                },
+                {
+                    "type": "Capitation",
+                    "value": false
+                },
+                {
+                    "type": "Other Claims",
+                    "value": false
+                },
+                {
+                    "type": "Pharmacy",
+                    "value": false
+                },
+                {
+                    "type": "Concurent Trend",
+                    "value": false
+                },
+                {
+                    "type": "Non Claims",
+                    "value": false
+                }
+            ],
+            "stoploss": [
+                {
+                    "type": "Medical Stoploss",
+                    "value": false,
+                    "amount": null
+                },
+                {
+                    "type": "Pharmacy Stoploss",
+                    "value": false,
+                    "amount": null
+                },
+                {
+                    "type": "Combined Stoploss",
+                    "value": false,
+                    "amount": null
+                },
+                {
+                    "type": "Cap_Budget_at_exp_stoploss",
+                    "value": true
+                }
+            ],
+            "inclusions": [
+                {
+                    "type": "Weight Inclusion",
+                    "monthlyOrRP": "Monthly",
+                    "inclusionData": [
+                        {
+                            "tableName": null,
+                            "fieldName": null,
+                            "rule": null
+                        }
+                    ]
+                },
+                {
+                    "type": "Budget Inclusion",
+                    "monthlyOrRP": null,
+                    "inclusionData": [
+                        {
+                            "tableName": null,
+                            "fieldName": null,
+                            "rule": null
+                        }
+                    ]
+                }
+            ],
+            "keys": [
+                {
+                    "type": "Weight Key",
+                    "monthlyOrRP": null,
+                    "keyName": null,
+                    "keyData": [
+                        {
+                            "tableName": null,
+                            "fieldName": null
+                        }
+                    ]
+                },
+                {
+                    "type": "Entity Key",
+                    "keyName": null,
+                    "keyData": [
+                        {
+                            "monthlyOrRP": null,
+                            "tableName": null,
+                            "fieldName": null
+                        }
+                    ]
+                },
+                {
+                    "type": "Budget Neutral Key",
+                    "keyName": null,
+                    "keyData": [
+                        {
+                            "monthlyOrRP": null,
+                            "tableName": null,
+                            "fieldName": null
+                        }
+                    ]
+                },
+                {
+                    "type": "MLR Key",
+                    "keyName": null,
+                    "keyData": [
+                        {
+                            "monthlyOrRP": null,
+                            "tableName": null,
+                            "fieldName": null
+                        }
+                    ]
+                },
+                {
+                    "type": "Stoploss Key",
+                    "keyName": null,
+                    "keyData": [
+                        {
+                            "monthlyOrRP": null,
+                            "tableName": null,
+                            "fieldName": null
+                        }
+                    ]
+                }
+            ],
+            "reportingPeriods": [
+                {
+                    "type": "Reporting Period Base",
+                    "value": null
+                },
+                {
+                    "type": "Reporting Period Weight 2",
+                    "value": null
+                },
+                {
+                    "type": "Reporting Period Weight 3",
+                    "value": null
+                }
+            ],
+            "financialTrend": [
+                {
+                    "typeOfService": null,
+                    "trendPercentage": null
+                }
+            ],
+            "grouperVersions": [
+                {
+                    "grouper": null,
+                    "version": null
+                }
+            ]
+        }
+    },
+    "Source": [
+        {
+            "VersionGUID": "aed39008-4808-4bd2-918e-cfdd63ab7f46"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+@import "node_modules/@telesis/cobalt/assets/cobaltstyles/theme.scss";
+
+.layout-topbar {
+  background-color: $topbarBackgroundColor;
+}
+
+.topbar-branding {
+    font-size: 18px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.topbar-logo {
+    width: 40px;
+    vertical-align: middle;
+}
+
+.branding-v-pipe {
+    vertical-align: middle;
+    height: 32px;
+    width: 1px;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    margin: 6px;
+}
+
+.topbar-branding-text {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 4px;
+    color: $white;
+    sup {
+        font-size: 9px;
+    }
+}
+
+.logout-text {
+    display: inline-block;
+    vertical-align: middle;
+    color: $white;
+    padding-top: 4px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $linkColor;
+}
+
+
+@media (max-width: 1024px) {
+    .menu-button {
+        display: inline-block;
+        color: #d8d8d8;
+        font-size: 24px;
+        vertical-align: middle;
+        padding-right: 10px;
+
+        i {
+            vertical-align: middle;
+        }
+    }
+
+    .topbar-logo {
+        display: none !important;
+        width: 40px !important;
+    }
+}

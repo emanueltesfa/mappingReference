@@ -1,0 +1,121 @@
+<div id="tab">
+  <br><br>
+  <p-table [value]="dataLists" styleClass="p-datatable-striped" [paginator]="true" [rows]="10"
+    [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[5,10,25,50]" dataKey="key" editMode="row" id="myTable">
+
+    <ng-template pTemplate="header" id="header">
+      <tr>
+        <th>NPI</th>
+        <th>Name</th>
+        <th>Group</th>
+        <th>Speciality</th>
+        <th>Service Line</th>
+        <th style="text-align: center;"> Actions</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-data let-editing="editing" let-ri="rowIndex">
+      <tr [pEditableRow]="data">
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="data.NPI">
+            </ng-template>
+            <ng-template pTemplate="output">
+              <p [ngStyle]="{'background-color': data.npiError ? 'yellow' : 'null'}">{{data.NPI}}</p>
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="data.Name">
+            </ng-template>
+            <ng-template pTemplate="output">
+              <p [ngStyle]="{'background-color': data.nameError ? 'yellow' : 'null'}">{{data.Name}}</p>
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="data.Group">
+            </ng-template>
+            <ng-template pTemplate="output">
+              <p [ngStyle]="{'background-color': data.groupError ? 'yellow' : 'null'}">{{data.Group}}</p>
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="data.Speciality">
+            </ng-template>
+            <ng-template pTemplate="output">
+              <p [ngStyle]="{'background-color': data.specialityError ? 'yellow' : 'null'}">{{data.Speciality}}</p>
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="data.ServiceLine">
+            </ng-template>
+            <ng-template pTemplate="output">
+              <!--  <p-dropdown [options]="data.ServiceLine" [editable]="true" [(ngModel)]="data.ServiceLine"
+                optionLabel="ServiceLine" optionValue="code"></p-dropdown> -->
+              <p>{{data.ServiceLine}}</p>
+
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td *ngIf="!isDoneEditing" style="text-align:center">
+          <button *ngIf="!editing" pButton pRipple type="button" pInitEditableRow icon="pi pi-pencil"
+            (click)="onRowEditInit(data)" class=" p-button-text"></button><br>
+          <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow icon="pi pi-check"
+            (click)="onRowEditSave(data,editing); validate(0, ri)"
+            class="p-button-text p-button-success p-mr-2"></button>
+          <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow icon="pi pi-times"
+            (click)="onRowEditCancel(data, ri)" class=" p-button-text p-button-danger"></button>
+          <button *ngIf="!editing" pButton pRipple type="button" icon="pi pi-trash" (click)="onRowEditDelete(ri)"
+            class=" p-button-text p-button-danger"></button>
+        </td>
+
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="paginatorleft">
+      <p-button type="button" styleClass="p-button-text"></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+      <p-button type="button" styleClass="p-button-text"></p-button>
+    </ng-template>
+  </p-table>
+
+  <br><br><br>
+
+  <!-- Upload BUTTON -->
+  <div id="fileUp">
+    <p-fileUpload mode="basic" name="myFiles[]" url="./upload.php"
+      accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, .csv, .xls" [auto]="true">
+    </p-fileUpload>
+  </div>
+  <br>
+  <!-- SAVE BUTTON -->
+  <button *ngIf="!isDoneEditing" pButton type="button" class="p-button-raised p-button-rounded" (click)="ifErrors()">Save</button><br>
+  <button *ngIf="isDoneEditing"pButton type="button" id="submitBut" class="p-button-raised p-button-rounded" (click)="save()">Submit</button><br>
+
+  <div id="page">
+    <br><br>
+    <p>Pages</p>
+    <a class="navbar-item" routerLink="">Home Page</a> <br>
+    <a class="navbar-item" routerLink="/unmappedServiceLinesPage">Service Line Page</a>
+    <br><br>
+  </div>
+</div>

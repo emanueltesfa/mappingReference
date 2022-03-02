@@ -1,0 +1,19 @@
+<div class="layout-topbar">
+    <div class="layout-topbar-content">
+        <a href="#" class="menu-button" (click)="app.onMenuButton($event)">
+            <i class="pi pi-bars"></i>
+        </a>
+        <div class="topbar-branding">
+            <img src="assets/images/mmm-logo.svg" class="topbar-logo">
+            <div class="branding-v-pipe"></div>
+            <div class="topbar-branding-text">{{app.title}}</div>
+        </div>
+
+        <div class="topbar-branding" style="float: right">
+            <span *ngIf="app.loading" class="topbar-branding-text ci pi-spin ci-gear-cog"></span>
+           
+            <div class="branding-v-pipe"></div>
+            <a href="logout" class="logout-text">Logout</a>
+        </div>
+    </div>
+</div>

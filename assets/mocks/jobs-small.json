@@ -1,0 +1,44 @@
+{
+  "data" : [
+    {
+      "errormessage" : "NULL",
+      "executiontime" : 8063,
+      "jobrunid" : "jr_061eb7ef21ef6392b50305e4551276b18f051b755609dfa4832001e3fde75505",
+      "orchjoblabel" : "orchestration_create_tables",
+      "clientid" : "4000236747",
+      "loggroupname" : "/aws-glue/python-jobs",
+      "allocatedcapacity" : 0,
+      "timeout" : 300,
+      "datestart" : "2020-02-24",
+      "orchestrationid" : "Sasha Test Version",
+      "orch_type" : "orchestration",
+      "completedon" : "NULL",
+      "triggername" : "NULL",
+      "jobrunstate" : "RUNNING",
+      "arguments" : "{'--application': 'pmx', '--caas_timestamp': '2020-02-24T18:18:26.744963', '--caas_type': 'core', '--caas_version': '3.0.0', '--drop_tables': '1', '--enterprise_id': '4000236747', '--job_type': 'Source', '--load_date_time': '2020-02-24T18:18:26.744963', '--max_cutoff': '2020-02-24T18:18:26.744963', '--orch_id': 'Sasha Test Version', '--orch_job_label': 'orchestration_create_tables', '--orch_type': 'orchestration', '--table_type_key': 'tables'}",
+      "id" : "jr_061eb7ef21ef6392b50305e4551276b18f051b755609dfa4832001e3fde75505",
+      "startedon" : "2020-02-24T18:19:00",
+      "jobname" : "3m-his-hdp-create-tables:1.0"
+    },
+    {
+      "errormessage" : "NULL",
+      "executiontime" : 4336,
+      "jobrunid" : "jr_104eb142fa305c9cc36a5cdae73a3b1d964ab09f11ba13bf5e2dcbd3d1765bd3",
+      "orchjoblabel" : "NULL",
+      "clientid" : "55303",
+      "loggroupname" : "/aws-glue/python-jobs",
+      "allocatedcapacity" : 0,
+      "timeout" : 2880,
+      "datestart" : "2020-02-24",
+      "orchestrationid" : "NULL",
+      "orch_type" : "NULL",
+      "completedon" : "NULL",
+      "triggername" : "55303",
+      "jobrunstate" : "RUNNING",
+      "arguments" : "{'--application': 'pmx', '--bucket': '3m-his-rd-hdp', '--caas_version': '3.0.0', '--enterprise_id': '55303', '--job-bookmark-option': 'job-bookmark-disable', '--orch_key': 'orchestration_pmx', '--orch_label': 'EnterpriseSeven'}",
+      "id" : "jr_104eb142fa305c9cc36a5cdae73a3b1d964ab09f11ba13bf5e2dcbd3d1765bd3",
+      "startedon" : "2020-02-24T19:19:19",
+      "jobname" : "3m-his-hdp-dag-orchestration"
+    }
+  ]
+}

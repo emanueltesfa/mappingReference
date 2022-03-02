@@ -1,0 +1,43 @@
+<div id="tab">
+    <br><br>
+
+    <th>Speciality
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Service Line</th>
+
+    <span class="p-float-label">
+        <input id="float-input" type="text" [(ngModel)]="specialityInput" pInputText>
+        <label for="float-input">Speciality</label> &nbsp;
+        <p-dropdown [options]="ServiceLineDrop" [(ngModel)]="serviceSeleced" optionLabel="name"
+            optionDisabled="inactive">
+        </p-dropdown>
+    </span><br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" [(ngModel)]="specialityInput2" pInputText>
+        <label for="float-input">Speciality</label> &nbsp;
+        <p-dropdown [options]="ServiceLineDrop" [(ngModel)]="serviceSeleced2" optionLabel="name"
+            optionDisabled="inactive">
+        </p-dropdown>
+    </span><br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" [(ngModel)]="specialityInput3" pInputText>
+        <label for="float-input">Speciality</label> &nbsp;
+        <p-dropdown [options]="ServiceLineDrop" [(ngModel)]="serviceSeleced3" optionLabel="name"
+            optionDisabled="inactive">
+        </p-dropdown>
+    </span><br>
+
+    <br><br><br><br>
+
+    <button pButton type="button" (click)="onSave()" class="p-button-raised p-button-rounded">Save</button><br>
+
+    <br><br><br><br>
+
+</div>
+<a class="navbar-item" routerLink="/">Home Page</a> <br> <br> <br> <br> <br>
+
+
+
+getPhyscianData(){
+    this.https.get("");
+}

@@ -1,0 +1,29 @@
+
+  <div class="layout-sidebar" [ngClass]="{'layout-sidebar-active':app.menuActive}">
+
+    <ul class="layout-menu" (click)="app.hideMobileMenu($event)">
+  
+      <li>
+         Home Link
+        <a routerLink="">
+          <span *ngIf="smallMenu" class="pi pi-fw pi-home tab-i" cTooltip="Home"></span>
+        </a>
+      </li>
+  
+     Configurable Modules allowed for current user
+      <li *ngFor="let module of app.userModules">
+        <a [routerLink]=module.routerLink routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <span *ngIf="smallMenu" class="pi pi-fw {{module.icon}} tab-i"></span>
+        </a>
+      </li>
+  
+      <li>
+       About Link 
+        <a *ngIf="app.versionInfo" (click)="app.showAboutInfo = true;">
+          <span *ngIf="smallMenu" class="pi pi-fw pi-info-circle tab-i" cTooltip="About HDP Tools"></span>
+        </a>
+      </li>
+  
+    </ul>
+  
+  </div>

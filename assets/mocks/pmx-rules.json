@@ -1,0 +1,628 @@
+{
+  "ModuleID": 182,
+  "ModuleVersion": "main",
+  "AppName": "pmx",
+  "ConfigType": "rules_pmx",
+  "BranchGUID": "61cf8582-72af-4b83-9100-e7ac19969588",
+  "Configuration": {
+    "USAGE": {
+      "NOTES": "Overall structure is used to configure rules per business process wise",
+      "REJECT": "Structure directs processing layer to reject or filter rows based on rules enabled as true",
+      "DERIVE": "Structure directs processing layer to derive values based on pre-defined business logic with a default pick columns functionality",
+      "INCLUSION": "Structure directs which type of inclusion process to be enabled and with default being all inclusion claims",
+      "KEYSTORE": "Structure directs to load keystore tables with history rule enabled for one time",
+      "CUSTOM": "Structure configured to load visit tables based on specific method visit and high weight tables"
+    },
+    "REJECT": {
+      "INST-CLAIM-HDR": {
+        "rules": [
+          {
+            "INST-CLAIM-HDR-INT-001": {
+              "description": "Sample - Primary Payer Name is not an integer datatype",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-LNG-001": {
+              "description": "Sample - Primary Payer Name is not a long datatype",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DBL-001": {
+              "description": "Sample - Primary Payer Name is not a double datatype",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-LEN-001": {
+              "description": "Sample - Admittingdiagnosisqualifiercode doesn't match the length requirement",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-LEN-002": {
+              "description": "Sample - Admittingdiagnosisqualifiercode doesn't meet minimum length standards",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-LEN-003": {
+              "description": "Sample - Admittingdiagnosisqualifiercode doesn't meet maximum length standards",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-VAL-002": {
+              "description": "Total Charges is not greater than zero",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-NUL-001": {
+              "description": "Admission Date is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-NUL-002": {
+              "description": "Discharge Status is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-NUL-006": {
+              "description": "Statementdatefromandtodate is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-NUL-010": {
+              "description": "Discharge Date is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-NUL-012": {
+              "description": "Type of Bill Code is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-EXT-007": {
+              "description": "Admission Date has value 0000000000",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DTE-CMP-001": {
+              "description": "Baby born later than admission date",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DTE-CMP-002": {
+              "description": "Discharge Date later than processing date",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DTE-CMP-003": {
+              "description": "Admission Date later than Discharge date",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-LKP-001": {
+              "description": "Claims categorized as undefined claims with invalid billtype",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-LKP-002": {
+              "description": "Discharge Status is invalid",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-HDR-IP-OP-PR": {
+        "rules": [
+          {
+            "INST-CLAIM-HDR-NUL-003": {
+              "description": "Patient Sex Code is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-NUL-004": {
+              "description": "Primary Diagnosis code is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-NUL-009": {
+              "description": "Medical Record Number is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-NUL-011": {
+              "description": "Total Charges is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-EXT-006": {
+              "description": "Claim Frequency code has value 8",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-LKP-003": {
+              "description": "Patient Gender Code is invalid",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-CHILD-001": {
+              "description": "Claim header does not have claim lines",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-PDX-REGEX-INVALID-001": {
+              "description": "Reject invalid primary dx codes",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DUP-001": {
+              "description": "Claim headers have duplicate hubclaimhashkey and loaddatetime",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-LINE": {
+        "rules": [
+          {
+            "INST-CLAIM-LINE-NUL-002": {
+              "description": "Service Unit Count is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-LINE-MIN-001": {
+              "description": "Sample - Service Unit Count does not meet the minimum value standards",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-LINE-MAX-001": {
+              "description": "Sample - Servie unit count does not meet the maximum value standards",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-LINE-EXT-001": {
+              "description": "Revenuecode has value 0001",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-MEMBER": {
+        "rules": [
+          {
+            "INST-MEMBER-NUL-001": {
+              "description": "Member birthdate is null or empty",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-LNK-CLAIM-HDR": {
+        "rules": [
+          {
+            "INST-LNK-CLAIM-HDR-FAC-001": {
+              "description": "Facility ID is null for associated claim",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-LINE-OP": {
+        "rules": [
+          {
+            "INST-CLAIM-LINE-OP-CUST-002": {
+              "description": "Outpatient Claim exceeds 450 lines",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-HDR-IP": {
+        "rules": [
+          {
+            "INST-CLAIM-HDR-IP-NUL-001": {
+              "description": "Inpatient claim Admitting Diagnosis is null or empty",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-IP-EXT-001": {
+              "description": "Inpatient claim Discharge Status still in patient mode",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-IP-EXT-002": {
+              "description": "Inpatient Claim falls in interim bill claim type category",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-HDR-PR": {
+        "rules": [
+          {
+            "INST-CLAIM-HDR-PR-001": {
+              "description": "Claim Header total charges <> sum of all service line charge amounts",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-HDR-IP-PRI-DUP": {
+        "rules": [
+          {
+            "INST-CLAIM-HDR-IP-DUP-003": {
+              "description": "Primary Logical duplicate claim for Inpatient Claims",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-HDR-IP-SEC-DUP": {
+        "rules": [
+          {
+            "INST-CLAIM-HDR-IP-DUP-004": {
+              "description": "Secondary Logical duplicate claim for Inpatient Claims",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-HDR-OP-PRI-DUP": {
+        "rules": [
+          {
+            "INST-CLAIM-HDR-OP-DUP-005": {
+              "description": "Primary Logical duplicate claim for Outpatient Claims",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-SAT-CLAIM-DERIVE": {
+        "rules": [
+          {
+            "INST-SAT-CLAIM-DERIVE-AGE-LESS-001": {
+              "description": "Member age is less than zero",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-SAT-CLAIM-DERIVE-AGE-GREAT-002": {
+              "description": "Member age is greater than 124",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-SAT-CLAIM-DERIVE-AGE-NUL-003": {
+              "description": "Member age is null or empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-EXT-004": {
+              "description": "Claim identified is an ICD Version 9 Claim",
+              "enabled": "true"
+            }
+          }
+        ]
+      }
+    },
+    "DERIVE": {
+      "INST-CLAIM-HDR": {
+        "rules": [
+          {
+            "INST-CLAIM-HDR-DER-001": {
+              "description": "Derive Length of Days stay count from discharge and admission date",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DER-002": {
+              "description": "Derive line of business decription from Lookup line of business table",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DER-003": {
+              "description": "Derive type of bill using facility code value abd claim frequency code",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DER-004": {
+              "description": "Derive the Inpatient and Outpatient Indicator using lookup bill type class",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DER-005": {
+              "description": "Derive Age in years using admission date and patient birth date",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DER-006": {
+              "description": "Derive Age in days using admission date and patient birth date",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DER-007": {
+              "description": "Derive ICD version for PR based on the most recent servicelinedate",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DER-008": {
+              "description": "Derive admissiondate for PR based on the oldest servicelinedate",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DER-009": {
+              "description": "Derive dischargedate for PR based on the most recent servicelinedate",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-DER-010": {
+              "description": "Enforced to pick the related derive columns to store in target table",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-LINE": {
+        "rules": [
+          {
+            "INST-CLAIM-LINE-DER-001": {
+              "description": "Assign Service unit count with 1 if empty",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-LINE-DER-002": {
+              "description": "Derive ER Flag using lookup revenue code",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-LINE-DER-004": {
+              "description": "If a place of service element in the placeofservicecodelist is blank or null set the value to 99. If a place of service of service element is only a single digit add a leading zero.",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-LINE-DER-003": {
+              "description": "Enforced to pick the related derive columns to store in target table",
+              "enabled": "true"
+            }
+          }
+        ]
+      }
+    },
+    "INCLUSION": {
+      "INST-CLAIM-HDR": {
+        "rules": [
+          {
+            "INST-CLAIM-HDR-APR-001": {
+              "description": "Sample - Load Claims to inclusion table for APR Grouper type which does not has PMX-INST-HDR-LEN003 reject rule",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-EAPGS-002": {
+              "description": "Sample - Load Claims to inclusion table for EAPGS Grouper type which does not have PMX-INST-HDR-LEN002 and PMX-INST-HDR-INT001 reject rule ",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-CRG-003": {
+              "description": "Sample - Load Claims to inclusion table for CRG Grouper type",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-PPR-004": {
+              "description": "Sample - Load Claims to inclusion table for PPR Grouper type for claim CWS36991071183 and BZF26287288421",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-ALL-005": {
+              "description": "Load all Claims to inclusion table for ALL Grouper type",
+              "enabled": "true"
+            }
+          },
+          {
+            "INST-CLAIM-HDR-SPECIFIC-006": {
+              "description": "Sample - Load specific Claims to inclusion table for PPR Grouper  specific to CWS36991071183, BZF26287288421",
+              "enabled": "false"
+            }
+          }
+        ]
+      }
+    },
+    "CUSTOM": {
+      "INST-CLAIM-LINE-OP-VISIT": {
+        "rules": [
+          {
+            "INST-CLAIM-LINE-OP-VISIT-001": {
+              "description": "Follow One Day One Visit and calculate Visit ID",
+              "enabled": "false"
+            }
+          },
+          {
+            "INST-CLAIM-LINE-OP-VISIT-002": {
+              "description": "Follow One Day One Visit and calculate Visit ID with ER OB Split",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "INST-CLAIM-LINE-OP-VISITHW": {
+        "rules": [
+          {
+            "INST-CLAIM-LINE-OP-VISITHW-001": {
+              "description": "Mark or Tag the high weighted visit",
+              "enabled": "true"
+            }
+          }
+        ]
+      }
+    },
+    "KEYSTORE": {
+      "KEY-CLAIM-HISTORY": {
+        "rules": [
+          {
+            "HISTORY": {
+              "description": "One-Time run for populating the history data in KeyStore Claim table",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "KEY-MEMBER-HISTORY": {
+        "rules": [
+          {
+            "HISTORY": {
+              "description": "One-Time run for populating the history data in KeyStore Member table",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "KEY-PERSON-HISTORY": {
+        "rules": [
+          {
+            "HISTORY": {
+              "description": "One-Time run for populating the history data in KeyStore Person table",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "KEY-PROVIDER-PHY-HISTORY": {
+        "rules": [
+          {
+            "HISTORY": {
+              "description": "One-Time run for populating the history data in KeyStore Provider table (Physician)",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "KEY-PROVIDER-FAC-HISTORY": {
+        "rules": [
+          {
+            "HISTORY": {
+              "description": "One-Time run for populating the history data in KeyStore Provider table (Physician)",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "KEY-CLAIM-INCREMENTAL": {
+        "rules": [
+          {
+            "USE-EXISTING-KEYS": {
+              "description": "Populate KeyStore Claim table with incremental data having existing claim-keys",
+              "enabled": "true"
+            },
+            "TRUE-INCREMENTAL": {
+              "description": "Populate KeyStore Claim table with true incremental data",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "KEY-MEMBER-INCREMENTAL": {
+        "rules": [
+          {
+            "USE-EXISTING-KEYS": {
+              "description": "Populate KeyStore Member table with incremental data having existing member-keys",
+              "enabled": "true"
+            },
+            "TRUE-INCREMENTAL": {
+              "description": "Populate KeyStore Member table with incremental data",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "KEY-PERSON-INCREMENTAL": {
+        "rules": [
+          {
+            "USE-EXISTING-KEYS": {
+              "description": "Populate KeyStore Person table with incremental data having existing person-keys",
+              "enabled": "true"
+            },
+            "TRUE-INCREMENTAL": {
+              "description": "Populate KeyStore Person table with incremental data",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "KEY-PROVIDER-PHY-INCREMENTAL": {
+        "rules": [
+          {
+            "USE-EXISTING-KEYS": {
+              "description": "Populate KeyStore Provider table (Physician) with incremental data having existing provider-keys",
+              "enabled": "true"
+            },
+            "TRUE-INCREMENTAL": {
+              "description": "Populate KeyStore Provider table (Physician) with incremental data",
+              "enabled": "true"
+            }
+          }
+        ]
+      },
+      "KEY-PROVIDER-FAC-INCREMENTAL": {
+        "rules": [
+          {
+            "USE-EXISTING-KEYS": {
+              "description": "Populate KeyStore Provider table (Facility) with incremental data having existing provider-keys",
+              "enabled": "true"
+            },
+            "TRUE-INCREMENTAL": {
+              "description": "Populate KeyStore Provider table (Facility) with incremental data",
+              "enabled": "true"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "Source": [
+    {
+      "VersionGUID": "d91bdf76-574d-44f5-95ab-8742f00a46e1"
+    }
+  ]
+}

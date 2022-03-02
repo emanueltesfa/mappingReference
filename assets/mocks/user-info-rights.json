@@ -1,0 +1,135 @@
+[
+  {
+    "Code": "CanUseApplication",
+    "ShortDescription": "Can Use Application",
+    "LongDescription": "Users granted this right can access the application but may have controlled access to specific modules.",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanViewGPCSSchedules",
+    "ShortDescription": "Can View GPCS Schedules",
+    "LongDescription": "Users granted this right are allowed to view GPCS schedules",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanModifyGPCSSchedules",
+    "ShortDescription": "Can Modify GPCS Schedules",
+    "LongDescription": "Users granted this right are allowed to modify GPCS schedules",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanReadConfiguration",
+    "ShortDescription": "Can Read Configuration",
+    "LongDescription": "Allows reading configuration data",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanWriteConfiguration",
+    "ShortDescription": "Can Write Configuration",
+    "LongDescription": "Allows writing of configuration data",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanReadConfigurationSchema",
+    "ShortDescription": "Can Read Configuration Schema",
+    "LongDescription": "Allows reading configuration schemas",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanWriteConfigurationSchema",
+    "ShortDescription": "Can Write Configuration Schema",
+    "LongDescription": "Allows writing of configuration schemas",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanPerformExtract",
+    "ShortDescription": "Can Perform Extract",
+    "LongDescription": "Users granted this right allows access to process an extract",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanPerformStart",
+    "ShortDescription": "Can Perform Start",
+    "LongDescription": "Users granted this right allows access to that start API",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanDeprovisionClient",
+    "ShortDescription": "Can Deprovision Client",
+    "LongDescription": "Security right to deprovision a client in HDP",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanPerformUpload",
+    "ShortDescription": "Can Perform Upload",
+    "LongDescription": "This right allows the user to initiate a data transfer to AWS",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanPerformDownload",
+    "ShortDescription": "Can Perform Download",
+    "LongDescription": "This right allows the user to initiate a data transfer from AWS",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanCheckStatus",
+    "ShortDescription": "Can Check Status",
+    "LongDescription": "This right allows the user to check the status of a data transfer",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanUseJobMonitor",
+    "ShortDescription": "Can Use Job Monitor",
+    "LongDescription": "Allows Access to Job Monitor in HDP Tools",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanUseConfigEditor",
+    "ShortDescription": "Can Use Config Editor",
+    "LongDescription": "Allows Access to Config Editor in HDP Tools",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanUseDAGViewer",
+    "ShortDescription": "Can Use DAG Viewer",
+    "LongDescription": "Allows Access to DAG Viewer in HDP Tools",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanUseAnalytics",
+    "ShortDescription": "Can Use Analytics",
+    "LongDescription": "Allows Access to Analytics in HDP Tools",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanUseBudgetApp",
+    "ShortDescription": "Can Use Budget App",
+    "LongDescription": "Allows Access to Budget App in HDP Tools",
+    "IsActive": true,
+    "ModuleID": 182
+  },
+  {
+    "Code": "CanUseUserInfo",
+    "ShortDescription": "Can Use User Info",
+    "LongDescription": "Allows Access to User Info in HDP Tools",
+    "IsActive": true,
+    "ModuleID": 182
+  }
+]

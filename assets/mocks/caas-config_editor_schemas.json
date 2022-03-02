@@ -1,0 +1,300 @@
+{
+  "ModuleID": 182,
+  "AppName": "moduleshared",
+  "ConfigType": "config_editor_schemas",
+  "BranchGUID": "61cf8582-72af-4b83-9100-e7ac19969588",
+  "Configuration": {
+    "car": [
+      {
+        "controlType": "textbox",
+        "key": "car_name",
+        "label": "Car Name",
+        "type": "text",
+        "defaultValue": "",
+        "required": "true",
+        "tooltip": "What is the name of your Car"
+      },
+      {
+        "controlType": "dropdown",
+        "key": "car_type",
+        "label": "Car Type",
+        "tooltip": "What type of car do you have?",
+        "options": [
+          {
+            "label": "Buick",
+            "value": "Buick"
+          },
+          {
+            "label": "Ferrari",
+            "value": "Ferrari"
+          },
+          {
+            "label": "BMW",
+            "value": "BMW"
+          },
+          {
+            "label": "Ford",
+            "value": "Ford"
+          }
+        ]
+      },
+      {
+        "controlType": "dropdown",
+        "key": "color",
+        "label": "Color",
+        "tooltip": "What color is your have?",
+        "options": [
+          {
+            "label": "Red",
+            "value": "Red"
+          },
+          {
+            "label": "Blue",
+            "value": "Blue"
+          },
+          {
+            "label": "Black",
+            "value": "Black"
+          },
+          {
+            "label": "Orange",
+            "value": "Orange"
+          }
+        ]
+      }
+    ],
+    "info": [
+      {
+        "controlType": "textbox",
+        "key": "client_folder",
+        "label": "Client Folder",
+        "type": "text",
+        "defaultValue": "%CLIENT_FOLDER%",
+        "required": "true",
+        "tooltip": "Use %CLIENT_FOLDER% as a placeholder to be replace by the name of the client"
+      },
+      {
+        "controlType": "textbox",
+        "key": "database",
+        "label": "Database",
+        "type": "text",
+        "defaultValue": "unit_test_client",
+        "required": "true",
+        "tooltip": "Enter the database to be used for this client"
+      },
+      {
+        "controlType": "textbox",
+        "key": "extract_upload_location",
+        "label": "Extract Upload Location",
+        "type": "url",
+        "defaultValue": "s3://%BUCKET%/upload_location",
+        "required": "true",
+        "tooltip": "Enter the Extract Upload Location for this client"
+      },
+      {
+        "controlType": "textbox",
+        "key": "job_timeout",
+        "label": "Job Timeout",
+        "type": "number",
+        "defaultValue": "300",
+        "required": "true",
+        "tooltip": "Job Timeout (seconds)"
+      },
+      {
+        "controlType": "textbox",
+        "key": "orch_version",
+        "label": "orch_version",
+        "type": "text",
+        "defaultValue": "%ORCHVERSION%",
+        "required": "true",
+        "tooltip": "Enter the Orchestration Version to be used for this client. You may use %ORCHVERSION% as a place holder."
+      },
+      {
+        "controlType": "textbox",
+        "key": "ref_database",
+        "label": "Reference Database",
+        "type": "text",
+        "defaultValue": "%ENV%_%ENTERPRISE_ID%_ref_db",
+        "required": "true",
+        "tooltip": "Enter the Referece Database to be used for this client. You may use %ENV% and %ENTERPRISE_ID% as placeholders"
+      },
+      {
+        "controlType": "textbox",
+        "key": "service_registry_pattern",
+        "label": "Service Registry Pattern",
+        "type": "url",
+        "defaultValue": "https://mwpub-lb.soa-%ENV%.aws.3mhis.net/ServiceRegistrySoap/ServiceRegistry.svc",
+        "required": "true",
+        "tooltip": "Service Registry Pattern. Use %ENV% as a placeholder for the Environment (i.e. rd)"
+      },
+      {
+        "controlType": "textbox",
+        "key": "sns_topic_pattern",
+        "label": "SNS Topic Pattern",
+        "type": "text",
+        "defaultValue": "arn:aws:sns:us-east-1:%ACCOUNT_ID%:%ENV%-hdp-hdp-Orchestration",
+        "required": "true",
+        "tooltip": "Enter the SNS Topic name to be used for this client. Use %ACCOUNT_ID% as a placeholder for the Account and use %ENV% as a placeholder for the Environment (i.e. rd)"
+      },
+      {
+        "controlType": "textbox",
+        "key": "sts_root_uri",
+        "label": "STS Root URI",
+        "type": "text",
+        "defaultValue": "https://mwpub-lb.soa-%ENV%.aws.3mhis.net/CoreSTS/",
+        "required": "true",
+        "tooltip": "STS Root URI. Use %ENV% as a placeholder for the Environment (i.e. rd)"
+      }
+    ],
+    "rules_pmx": [
+      {
+        "controlType": "textbox",
+        "key": "description",
+        "label": "Description",
+        "type": "text",
+        "defaultValue": "Default Value Test",
+        "required": "true",
+        "tooltip": "Enter the Rule Description"
+      },
+      {
+        "controlType": "dropdown",
+        "key": "enabled",
+        "label": "Enabled",
+        "tooltip": "Select if the Rule should be Enabled",
+        "options": [
+          {
+            "label": "True",
+            "value": "true"
+          },
+          {
+            "label": "False",
+            "value": "false"
+          }
+        ]
+      }
+    ],
+    "test": [
+      {
+        "controlType": "dropdown",
+        "key": "dropdown_test",
+        "label": "Dropdown Test",
+        "tooltip": "HEY Tooltip",
+        "options": [
+          {
+            "label": "X1",
+            "value": "X1"
+          },
+          {
+            "label": "X2",
+            "value": "X2"
+          },
+          {
+            "label": "X3",
+            "value": "X3"
+          },
+          {
+            "label": "X4",
+            "value": "X4"
+          }
+        ]
+      },
+      {
+        "controlType": "textbox",
+        "key": "sns_topic_pattern",
+        "label": "SNS Topic Pattern",
+        "type": "text",
+        "defaultValue": "arn:aws:sns:us-east-1:%ACCOUNT_ID%:%ENV%-hdp-hdp-Orchestration",
+        "required": "true",
+        "tooltip": "Enter the SNS Topic name to be used blah, blah, blah"
+      },
+      {
+        "controlType": "textbox",
+        "key": "client_folder",
+        "label": "Client Folder",
+        "type": "text",
+        "defaultValue": "%CLIENT_FOLDER%",
+        "required": "true",
+        "tooltip": "This uses the %CLIENT_FOLDER% pattern to be repalce by the name of the client"
+      },
+      {
+        "controlType": "textbox",
+        "key": "sts_root_uri",
+        "label": "STS Root URI",
+        "type": "text",
+        "defaultValue": "https://mwpub-lb.soa-%ENV%.aws.3mhis.net/CoreSTS/",
+        "required": "true",
+        "tooltip": "STS Root URI"
+      },
+      {
+        "controlType": "textbox",
+        "key": "service_registry_pattern",
+        "label": "Service Registry Pattern",
+        "type": "text",
+        "defaultValue": "https://mwpub-lb.soa-%ENV%.aws.3mhis.net/ServiceRegistrySoap/ServiceRegistry.svc",
+        "required": "true",
+        "tooltip": "Service Registry Pattern"
+      },
+      {
+        "controlType": "textbox",
+        "key": "job_timeout",
+        "label": "Job Timeout",
+        "type": "number",
+        "defaultValue": "300",
+        "required": "true",
+        "tooltip": "Job Timeout"
+      },
+      {
+        "controlType": "textbox",
+        "key": "email_test",
+        "label": "EMail Test",
+        "type": "email",
+        "required": "true",
+        "tooltip": "EMail Test"
+      },
+      {
+        "controlType": "textbox",
+        "key": "url_test",
+        "label": "URL Test",
+        "type": "url",
+        "required": "true",
+        "tooltip": "URL Test"
+      },
+      {
+        "controlType": "label",
+        "key": "nothing_test",
+        "label": "Nothing Test",
+        "defaultValue": "",
+        "tooltip": "nothing_test"
+      },
+      {
+        "controlType": "dropdown",
+        "key": "dropdown_test2",
+        "label": "Dropdown Test2",
+        "tooltip": "This is a tool tip for my awesome dropdown",
+        "options": [
+          {
+            "label": "Eric",
+            "value": "Eric"
+          },
+          {
+            "label": "Joe",
+            "value": "Joe"
+          },
+          {
+            "label": "Alison",
+            "value": "Alison"
+          },
+          {
+            "label": "Jodie",
+            "value": "Jodie"
+          }
+        ]
+      }
+    ]
+  },
+  "Source": [
+    {
+      "VersionGUID": "6cdc1713-927b-4248-b1b6-e74ea9805a3d"
+    }
+  ]
+}

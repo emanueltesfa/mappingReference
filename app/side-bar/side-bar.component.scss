@@ -1,0 +1,14 @@
+@import "node_modules/@telesis/cobalt/assets/cobaltstyles/theme.scss";
+
+.layout-sidebar {
+  width: 55px; 
+}
+
+.tab-i {
+  display: inline-block !important;
+  position: relative !important;
+  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: middle !important;
+  margin-top:-5px !important;
+}

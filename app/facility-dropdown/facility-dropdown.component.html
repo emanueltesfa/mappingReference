@@ -1,0 +1,44 @@
+<div id="Page">
+    <br><br><br>
+    <h2>Pick a Enterprise to map</h2><br>
+
+    <p-dropdown id="drop" [options]="enterprise" [(ngModel)]="selectedEnterprise" optionValue="BranchID"
+        (onChange)="populateDrop($event)" optionLabel="BranchName" [filter]="true" filterBy="name"
+        placeholder="Select an Enterprise"></p-dropdown><br><br>
+
+
+    <div class="showingDrop" *ngIf="selectedEnterprise != null">
+        <h2>Pick a Facility to map</h2><br>
+
+        <div *ngIf="ifLoadingDrop">
+            <p-progressSpinner>
+            </p-progressSpinner>
+        </div>
+
+        <div *ngIf="!ifLoadingDrop">
+            <p-dropdown id="drop" [options]="facility2" (onChange)="checkIfMapExists(selectedEnterprise)"
+                [(ngModel)]="selectedFacility" optionValue="BranchID" optionLabel="BranchName" [filter]="true"
+                filterBy="name" placeholder="Select an Facility"> </p-dropdown><br><br>
+        </div>
+
+        <div *ngIf="!ifPageExists">
+            <button class="navbar-item" routerLink="/fileUploadPage" pButton type="button"
+                class="p-button-raised p-button-rounded">Next</button>
+        </div>
+
+        <div *ngIf="ifPageExists">
+            <button class="navbar-item" routerLink="/mappingPage" pButton type="button"
+                class="p-button-raised p-button-rounded">Next</button>
+        </div>
+
+    </div>
+</div>
+<div id="navigation">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>Pages</p>
+    <a class="navbar-item" routerLink="/">Home Page</a> <br>
+    <a class="navbar-item" routerLink="/unmappedServiceLinesPage">Service Line Page</a>  
+
+</div>
+
+<!-- Error handling & seperate jsons -->
